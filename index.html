@@ -394,41 +394,23 @@
         }
 
         /* ФОРМА ОБРАТНОЙ СВЯЗИ */
-        .form-group {
-            margin-bottom: 30px;
-        }
+        <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
+    
+    <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
+    
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        .form-input {
-            width: 100%;
-            padding: 18px 0;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid rgba(255,255,255,0.15);
-            color: var(--text-light);
-            font-family: var(--font-sans);
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-bottom-color: var(--accent-gold);
-        }
-
-        .form-input::placeholder {
-            color: rgba(255,255,255,0.3);
-        }
-
-        .copyright {
-            text-align: center;
-            font-size: 0.95rem;
-            color: var(--accent-gold);
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 40px;
-            font-family: var(--font-serif);
-            letter-spacing: 1px;
-            font-style: italic;
-        }
+    <div class="form-group">
+        <input type="text" name="Имя клиента" class="form-input" placeholder="Ваше имя" required>
+    </div>
+    <div class="form-group">
+        <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
+    </div>
+    <div class="form-group" style="margin-top: 40px;">
+        <button type="submit" class="btn">Начать проектирование</button>
+    </div>
+</form>
 
         /* --- АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ --- */
         @media (max-width: 992px) {
