@@ -394,23 +394,24 @@
         }
 
         /* ФОРМА ОБРАТНОЙ СВЯЗИ */
-        <form action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
-    
-    <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
-    
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <div>
+    <form id="premium-form" method="POST">
+        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
+        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
+        <input type="checkbox" name="botcheck" style="display: none;">
 
-    <div class="form-group">
-        <input type="text" name="Имя клиента" class="form-input" placeholder="Ваше имя" required>
-    </div>
-    <div class="form-group">
-        <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
-    </div>
-    <div class="form-group" style="margin-top: 40px;">
-        <button type="submit" class="btn">Начать проектирование</button>
-    </div>
-</form>
+        <div class="form-group">
+            <input type="text" name="Имя" class="form-input" placeholder="Ваше имя" required>
+        </div>
+        <div class="form-group">
+            <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
+        </div>
+        <div class="form-group" style="margin-top: 40px;">
+            <button type="submit" id="submit-btn" class="btn">Начать проектирование</button>
+        </div>
+    </form>
+    <div id="form-result" class="form-result"></div>
+</div>
 
         /* --- АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ --- */
         @media (max-width: 992px) {
