@@ -394,24 +394,45 @@
         }
 
         /* ФОРМА ОБРАТНОЙ СВЯЗИ */
-        <div>
-    <form id="premium-form" method="POST">
-        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
-        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
-        <input type="checkbox" name="botcheck" style="display: none;">
+        .form-group {
+            margin-bottom: 18px;
+        }
 
-        <div class="form-group">
-            <input type="text" name="Имя" class="form-input" placeholder="Ваше имя" required>
-        </div>
-        <div class="form-group">
-            <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
-        </div>
-        <div class="form-group" style="margin-top: 40px;">
-            <button type="submit" id="submit-btn" class="btn">Начать проектирование</button>
-        </div>
-    </form>
-    <div id="form-result" class="form-result"></div>
-</div>
+        .form-input {
+            width: 100%;
+            min-height: 58px;
+            padding: 16px 18px;
+            border: 1px solid rgba(197, 168, 128, 0.45);
+            border-radius: 0;
+            background: rgba(15, 15, 16, 0.55);
+            color: var(--text-light);
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.4px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-input::placeholder {
+            color: rgba(229, 229, 229, 0.62);
+        }
+
+        .form-input:focus {
+            border-color: var(--accent-gold);
+            background: rgba(15, 15, 16, 0.82);
+        }
+
+        .footer-grid form .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-result {
+            margin-top: 20px;
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+        }
 
         /* --- АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ --- */
         @media (max-width: 992px) {
@@ -563,17 +584,21 @@
                     </div>
                 </div>
                 <div>
-                    <form action="#" onsubmit="event.preventDefault(); alert('Благодарим за доверие. Андрей Забожанов свяжется с вами в ближайшее время.');">
+                    <form id="premium-form" method="POST">
+                        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
+                        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
+                        <input type="checkbox" name="botcheck" style="display: none;">
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Ваше имя" required>
+                            <input type="text" name="Имя" class="form-input" placeholder="Ваше имя" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-input" placeholder="Номер телефона" required>
+                            <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
                         </div>
                         <div class="form-group" style="margin-top: 40px;">
-                            <button type="submit" class="btn">Начать проектирование</button>
+                            <button type="submit" id="submit-btn" class="btn">Начать проектирование</button>
                         </div>
                     </form>
+                    <div id="form-result" class="form-result"></div>
                 </div>
             </div>
             <div class="copyright">
@@ -599,6 +624,44 @@
 
         window.addEventListener('scroll', scrollReveal);
         window.addEventListener('load', scrollReveal);
+
+        const premiumForm = document.getElementById('premium-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formResult = document.getElementById('form-result');
+
+        premiumForm.addEventListener('submit', async function(event) {
+            event.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправляем...';
+            formResult.textContent = '';
+
+            const formData = new FormData(premiumForm);
+            const payload = Object.fromEntries(formData);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (result.success) {
+                    premiumForm.reset();
+                    formResult.textContent = 'Заявка отправлена. Андрей Забожанов свяжется с вами в ближайшее время.';
+                } else {
+                    formResult.textContent = 'Заявка не отправилась. Позвоните по номеру выше.';
+                }
+            } catch (error) {
+                formResult.textContent = 'Заявка не отправилась. Позвоните по номеру выше.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Начать проектирование';
+            }
+        });
     </script>
 </body>
 </html>
