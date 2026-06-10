@@ -121,22 +121,32 @@
                     </div>
                 </div>
                 <div>
-                    <form id="premium-form" method="POST">
-                        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
-                        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
-                        <input type="checkbox" name="botcheck" class="botcheck">
-                        <div class="form-group">
-                            <input type="text" name="Имя" class="form-input" placeholder="Ваше имя" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
-                        </div>
-                        <div class="form-group form-submit-group">
-                            <button type="submit" id="submit-btn" class="btn">Начать проектирование</button>
-                        </div>
-                    </form>
-                    <div id="form-result" class="form-result"></div>
-                </div>
+    <form id="premium-form" method="POST" style="max-width: 450px; margin: 0 auto;">
+        
+        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
+        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
+        <input type="checkbox" name="botcheck" style="display: none;">
+
+        <div style="margin-bottom: 30px; position: relative;">
+            <input type="text" name="Имя" placeholder="Ваше имя" required
+                   style="width: 100%; padding: 18px 0; background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; color: #e5e5e5 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; outline: none !important; box-shadow: none !important; border-radius: 0 !important;">
+        </div>
+
+        <div style="margin-bottom: 40px; position: relative;">
+            <input type="tel" name="Телефон" placeholder="Номер телефона" required
+                   style="width: 100%; padding: 18px 0; background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; color: #e5e5e5 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; outline: none !important; box-shadow: none !important; border-radius: 0 !important;">
+        </div>
+
+        <div style="margin-top: 40px;">
+            <button type="submit" id="submit-btn" 
+                    style="display: inline-block; width: 100%; padding: 20px 40px; background-color: #c5a880; color: #0f0f10; font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; border: 1px solid #c5a880; cursor: pointer; transition: all 0.3s ease; border-radius: 0 !important;">
+                Начать проектирование
+            </button>
+        </div>
+    </form>
+    
+    <div id="form-result" class="form-result" style="display: none; font-size: 1.1rem; color: #c5a880; font-family: 'Cormorant Garamond', serif; border: 1px dashed #c5a880; padding: 20px; text-align: center; margin-top: 20px; letter-spacing: 1px;"></div>
+</div>
             </div>
             <div class="copyright">
                 «Интерьер, который помнит откуда он родом, но смотрит вперёд»
