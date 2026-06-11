@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Андрей Забожанов | Премиальные интерьеры с горским характером</title>
+    <title>Андрей Забожанов | Интерьерная архитектура с горским характером</title>
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://design.great05.ru/">
     <meta property="og:title" content="Андрей Забожанов | Премиальные интерьеры с горским характером">
@@ -11,7 +12,199 @@
     <meta property="og:image" content="https://design.great05.ru/about.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109783591', 'ym');
+
+        ym(109783591, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/109783591" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <style>
+        /* --- ШРИФТЫ И СВЕРХДОРОГАЯ ПАЛИТРА --- */
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500&display=swap');
+
+        :root {
+            --bg-black: #0a0a0b;
+            --bg-stone: #121214;
+            --accent-gold: #d4b795;
+            --accent-dark-gold: #8c7255;
+            --text-pure: #ffffff;
+            --text-safari: #bcbcbc;
+            --text-dim: #666666;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition-fluid: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* ТЕКСТУРНЫЙ ШУМ НА ЗАДНЕМ ПЛАНЕ */
+        html::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; background-color: var(--bg-black); color: var(--text-pure); font-family: var(--font-sans); overflow-x: hidden; }
+        h1, h2, h3 { font-family: var(--font-serif); font-weight: 300; letter-spacing: 0.05em; }
+        a { color: inherit; text-decoration: none; transition: var(--transition-fluid); }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 50px; }
+
+        /* ЭФФЕКТЫ КРЕАТИВНОГО ПОЯВЛЕНИЯ (SCROLL EFFECTS) */
+        .reveal { opacity: 0; transform: translateY(60px); transition: var(--transition-fluid); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-60px); transition: var(--transition-fluid); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+
+        /* --- ШАПКА САЙТА --- */
+        header { position: absolute; top: 0; left: 0; width: 100%; z-index: 100; padding: 40px 0; }
+        .header-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); font-size: 1.8rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 400; }
+        .logo span { color: var(--accent-gold); }
+        .nav-phone { font-size: 0.85rem; letter-spacing: 0.2em; border-bottom: 1px solid rgba(212, 183, 149, 0.3); padding-bottom: 6px; font-weight: 300; }
+        .nav-phone:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+
+        /* --- ГЛАВНЫЙ ЭКРАН (HERO) --- */
+        .hero {
+            height: 100vh; min-height: 800px; position: relative; display: flex; align-items: center;
+            background: linear-gradient(180deg, rgba(10,10,11,0.4) 0%, rgba(10,10,11,0.9) 100%), 
+                        url('hero.jpg') center/cover no-repeat;
+        }
+        .hero-content { max-width: 900px; position: relative; z-index: 2; }
+        .hero h1 { font-size: 6rem; line-height: 1.05; text-transform: uppercase; margin-bottom: 35px; }
+        .hero h1 span { font-family: var(--font-sans); font-weight: 200; font-size: 4rem; display: block; color: var(--accent-gold); letter-spacing: 0.1em; }
+        .hero p { font-size: 1.2rem; color: var(--text-safari); margin-bottom: 50px; max-width: 600px; font-weight: 200; line-height: 1.8; letter-spacing: 0.03em; }
+        
+        .btn {
+            display: inline-flex; align-items: center; padding: 22px 50px; background-color: transparent;
+            color: var(--accent-gold); font-weight: 400; letter-spacing: 0.25em; text-transform: uppercase;
+            font-size: 0.75rem; border: 1px solid var(--accent-gold); cursor: pointer; position: relative; overflow: hidden; transition: var(--transition-fluid);
+        }
+        .btn::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background-color: var(--accent-gold); transition: var(--transition-fluid); z-index: -1;
+        }
+        .btn:hover { color: var(--bg-black); }
+        .btn:hover::before { left: 0; }
+
+        /* --- СЕКЦИЯ: МАНИФЕСТ --- */
+        .manifesto { padding: 200px 0; background-color: var(--bg-black); position: relative; }
+        .manifesto-decor { position: absolute; left: 50%; top: 0; width: 1px; height: 150px; background: linear-gradient(to bottom, var(--accent-gold), transparent); }
+        .manifesto-text { font-family: var(--font-serif); font-size: 3rem; line-height: 1.4; max-width: 1100px; margin: 0 auto; text-align: left; font-weight: 300; }
+        .manifesto-text span { color: var(--accent-gold); font-style: italic; }
+
+        /* --- СЕКЦИЯ: О ДИЗАЙНЕРЕ --- */
+        .about { padding: 160px 0; background-color: var(--bg-stone); position: relative; }
+        .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center; }
+        .about-img-wrapper { position: relative; padding-bottom: 120%; overflow: hidden; border: 1px solid rgba(255,255,255,0.03); }
+        .about-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%) contrast(105%) brightness(85%); transition: var(--transition-fluid); }
+        .about-img-wrapper:hover .about-img { transform: scale(1.04); filter: grayscale(0%) contrast(100%) brightness(95%); }
+        
+        .about-info h2 { font-size: 4rem; text-transform: uppercase; margin-bottom: 40px; line-height: 1.1; }
+        .about-info h2 text-dim { color: var(--text-dim); }
+        .about-info p { color: var(--text-safari); margin-bottom: 50px; font-size: 1.1rem; font-weight: 200; line-height: 1.9; }
+
+        .single-stat-box { border-left: 2px solid var(--accent-gold); padding-left: 40px; margin-top: 60px; }
+        .single-stat-box h3 { font-size: 6rem; color: var(--accent-gold); line-height: 0.9; margin-bottom: 15px; font-weight: 400; font-family: var(--font-serif); }
+        .single-stat-box p { font-size: 1.2rem; color: var(--text-pure); font-weight: 300; letter-spacing: 0.05em; line-height: 1.5; }
+
+        /* --- СЕКЦИЯ: ПОРТФОЛИО --- */
+        .portfolio { padding: 180px 0; background-color: var(--bg-black); }
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 100px; }
+        .section-title { font-size: 4.5rem; text-transform: uppercase; line-height: 1; }
+        .section-title span { font-family: var(--font-sans); font-size: 1rem; color: var(--accent-gold); display: block; letter-spacing: 0.3em; margin-bottom: 15px; }
+        .section-subtitle-decor { font-family: var(--font-serif); font-style: italic; font-size: 1.8rem; color: var(--text-dim); max-width: 400px; text-align: right; line-height: 1.3; }
+
+        .portfolio-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; }
+        .portfolio-item { position: relative; overflow: hidden; background-color: #000; transition: var(--transition-fluid); border: 1px solid rgba(255,255,255,0.02); }
+        
+        .portfolio-item.h-700 { height: 750px; }
+        .portfolio-item.h-500 { height: 500px; margin-top: 100px; }
+        .portfolio-item.wide { grid-column: span 2; height: 700px; margin-top: 40px; }
+
+        .portfolio-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(75%) saturate(85%); transition: var(--transition-fluid); }
+        .portfolio-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(10,10,11,1) 0%, rgba(10,10,11,0.3) 50%, transparent 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 50px; opacity: 0.9; transition: var(--transition-fluid); }
+        
+        .portfolio-item:hover .portfolio-img { transform: scale(1.02); filter: brightness(90%) saturate(100%); }
+        .portfolio-overlay h3 { font-size: 2.2rem; margin-bottom: 12px; transform: translateY(10px); transition: var(--transition-fluid); }
+        .portfolio-overlay p { font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 3px; font-weight: 400; transform: translateY(10px); transition: var(--transition-fluid); }
+        .portfolio-item:hover .portfolio-overlay h3, .portfolio-item:hover .portfolio-overlay p { transform: translateY(0); }
+
+        /* --- СЕКЦИЯ: ЦЕННОСТИ --- */
+        .values { padding: 160px 0; background-color: var(--bg-stone); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .value-card { padding: 60px 45px; background: linear-gradient(145deg, #19191c, #111113); border: 1px solid rgba(255, 255, 255, 0.01); transition: var(--transition-fluid); position: relative; }
+        .value-card:hover { transform: translateY(-10px); border-color: rgba(212, 183, 149, 0.2); box-shadow: 0 30px 60px rgba(0,0,0,0.4); }
+        .value-number { font-family: var(--font-serif); font-size: 1.8rem; color: var(--accent-dark-gold); margin-bottom: 35px; display: block; font-style: italic; }
+        .value-card h3 { font-size: 1.6rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 400; color: #f5f5f5; }
+        .value-card p { color: var(--text-safari); font-size: 0.95rem; font-weight: 200; line-height: 1.8; }
+
+        /* --- СЕКЦИЯ: КОНТАКТЫ И ФОРМА --- */
+        footer { padding: 180px 0 80px 0; background: linear-gradient(rgba(10,10,11,0.92), rgba(10,10,11,0.98)), url('footer_bg.jpg') center/cover no-repeat; border-top: 1px solid rgba(212, 183, 149, 0.1); }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; margin-bottom: 100px; }
+        .footer-info h2 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 40px; text-transform: uppercase; }
+        .footer-contacts p { font-size: 1rem; margin-bottom: 15px; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; }
+        .footer-contacts a { color: var(--text-pure); font-size: 2.2rem; font-family: var(--font-serif); letter-spacing: 0.05em; font-weight: 300; }
+        .footer-contacts a:hover { color: var(--accent-gold); }
+
+        .form-box { position: relative; }
+        .form-group { margin-bottom: 45px; position: relative; }
+        
+        .form-input {
+            width: 100%; padding: 20px 0; background: transparent !important; border: none !important; 
+            border-bottom: 1px solid rgba(255,255,255,0.15) !important; color: var(--text-pure) !important; 
+            font-family: var(--font-serif); font-size: 1.4rem; font-style: italic; 
+            outline: none !important; box-shadow: none !important; border-radius: 0 !important; transition: var(--transition-fluid);
+        }
+        .form-input:focus { border-bottom-color: var(--accent-gold) !important; }
+        .form-input::placeholder { color: rgba(255,255,255,0.25); font-weight: 300; }
+
+        .form-btn {
+            width: 100%; padding: 24px; background-color: var(--accent-gold); color: var(--bg-black);
+            font-family: var(--font-sans); font-weight: 500; letter-spacing: 4px; text-transform: uppercase;
+            font-size: 0.8rem; border: 1px solid var(--accent-gold); cursor: pointer; transition: var(--transition-fluid);
+            border-radius: 0 !important;
+        }
+        .form-btn:hover { background-color: transparent; color: var(--accent-gold); }
+
+        .form-result {
+            display: none; font-size: 1.2rem; color: var(--accent-gold); font-family: var(--font-serif);
+            border: 1px dashed var(--accent-gold); padding: 25px; text-align: center; margin-top: 30px; letter-spacing: 1px;
+        }
+
+        .copyright { text-align: center; font-size: 1.1rem; color: var(--accent-gold); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 50px; font-family: var(--font-serif); letter-spacing: 0.08em; font-style: italic; }
+
+        /* --- АДАПТИВНОСТЬ --- */
+        @media (max-width: 1200px) {
+            .hero h1 { font-size: 4.5rem; }
+            .hero h1 span { font-size: 3rem; }
+            .about-grid, .footer-grid { gap: 60px; }
+        }
+
+        @media (max-width: 992px) {
+            .container { padding: 0 30px; }
+            .about-grid, .footer-grid { grid-template-columns: 1fr; gap: 60px; }
+            .portfolio-grid, .values-grid { grid-template-columns: 1fr; gap: 30px; }
+            .portfolio-item.h-500 { margin-top: 0; height: 500px; }
+            .portfolio-item.h-700 { height: 500px; }
+            .portfolio-item.wide { grid-column: span 1; height: 500px; }
+            .hero h1 { font-size: 3.5rem; }
+            .hero h1 span { font-size: 2.2rem; }
+            .manifesto-text { font-size: 2rem; }
+            .about-info h2 { font-size: 2.8rem; }
+            .footer-info h2 { font-size: 3rem; }
+            .about-img-wrapper { padding-bottom: 90%; }
+        }
+    </style>
 </head>
 <body>
 
@@ -24,18 +217,19 @@
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Память предков.<br>Эстетика будущего.</h1>
-                <p>Премиальные интерьеры с горским характером от Андрея Забожанова. 20 лет авторского опыта трансформации кавказских традиций в современную роскошь уровня Quiet Luxury для объектов в Москве.</p>
+            <div class="hero-content reveal-left active">
+                <h1><span>Interior Architecture</span>Память предков.<br>Эстетика будущего.</h1>
+                <p>Премиальные жилые пространства с глубоким горским характером от архитектора Андрея Забожанова. 20 лет изысканной трансформации кавказских традиций в контекст современных резиденций Москвы.</p>
                 <a href="#contact" class="btn">Обсудить ваш проект</a>
             </div>
         </div>
     </section>
 
     <section class="manifesto reveal">
+        <div class="manifesto-decor"></div>
         <div class="container">
             <p class="manifesto-text">
-                «Истинная роскошь не кричит. Она молчит на языке вековых гор. Мы берем суровую честность дагестанской сакли, тепло родного очага, благородство природного камня и переносим их в контекст современных технологичных пространств».
+                «Истинная роскошь не кричит. Она молчит на языке вековых скал. Мы берем <span>суровую честность горской сакли</span>, тепло родного очага и переносим их в безупречные технологичные интерьеры будущего».
             </p>
         </div>
     </section>
@@ -43,14 +237,16 @@
     <section class="about reveal">
         <div class="container">
             <div class="about-grid">
-                <img src="about.jpg" alt="Интерьер от Андрея Забожанова" class="about-img">
+                <div class="about-img-wrapper">
+                    <img src="about.jpg" alt="Интерьерная концепция" class="about-img">
+                </div>
                 <div class="about-info">
-                    <h2>Характер, отлитый в камне</h2>
-                    <p>Я не занимаюсь шаблонным декорированием. Моя цель — подружить первозданную, мощную энергетику кавказского этноса с требованиями к жилью ультра-премиум класса. Натуральные текстуры, безупречные пропорции и подлинность в каждой детали позволяют создавать пространства с ярко выраженным стержнем.</p>
-
+                    <h2>Характер,<br><span style="color:var(--text-dim)">отлитый в камне</span></h2>
+                    <p>Моя философия — подружить первозданную, монументальную архитектуру Дагестана с высочайшими требованиями к объектам ультра-премиум класса в Москве. Натуральные, тактильные текстуры, чистая геометрия линий и историческая подлинность артефактов создают интерьеры со стальным стержнем.</p>
+                    
                     <div class="single-stat-box">
                         <h3>20 лет</h3>
-                        <p>Уникального практического опыта создания аутентичных интерьеров в Дагестане</p>
+                        <p>Бескомпромиссного практического опыта проектирования знаковых объектов в Дагестане.</p>
                     </div>
                 </div>
             </div>
@@ -59,30 +255,34 @@
 
     <section class="portfolio reveal">
         <div class="container">
-            <h2 class="section-title">Реализованные объекты</h2>
+            <div class="section-header">
+                <h2 class="section-title"><span>Portfolio</span>Архитектура духа</h2>
+                <div class="section-subtitle-decor">Штучные решения для людей, ценящих масштаб</div>
+            </div>
+            
             <div class="portfolio-grid">
-
-                <div class="portfolio-item">
-                    <img src="portfolio1.jpg" alt="Зона отдыха с камином" class="portfolio-img">
+                
+                <div class="portfolio-item h-700">
+                    <img src="portfolio1.jpg" alt="Проект камина" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Современный очаг</h3>
-                        <p>Фактурная кирпичная кладка и ремесленные медные панно</p>
+                        <p>Фактурная кладка ручной работы и патинированный металл</p>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="portfolio2.jpg" alt="Архитектурные решения" class="portfolio-img">
+                <div class="portfolio-item h-500">
+                    <img src="portfolio2.jpg" alt="Винтовая лестница в интерьере" class="portfolio-img">
                     <div class="portfolio-overlay">
-                        <h3>Код архитектуры</h3>
-                        <p>Интеграция радиальной геометрии в этнический лофт</p>
+                        <h3>Код геометрии</h3>
+                        <p>Интеграция радиальных архитектурных узлов в этно-минимализм</p>
                     </div>
                 </div>
 
                 <div class="portfolio-item wide">
-                    <img src="portfolio3.jpg" alt="Премиальная гостиная этно" class="portfolio-img">
+                    <img src="portfolio3.jpg" alt="Гостиная со вторым светом" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Пространство «Вершина»</h3>
-                        <p>Двухуровневые апартаменты: симбиоз горского сланца, дерева и премиального света</p>
+                        <p>Двухуровневая резиденция: союз карагача, дикого сланца и скрытых технологий</p>
                     </div>
                 </div>
 
@@ -92,25 +292,24 @@
 
     <section class="values reveal">
         <div class="container">
-            <h2 class="section-title">Философия дорогого этно</h2>
             <div class="values-grid">
-
+                
                 <div class="value-card">
-                    <span class="value-number">I</span>
+                    <span class="value-number">// 01</span>
                     <h3>Родные материалы</h3>
-                    <p>Прямые поставки из Дагестана: массив столетнего карагача, благородный речной камень, аутентичная старинная утварь и ковры ручной работы.</p>
+                    <p>Прямые поставки из Дагестана: реликтовый карагач, массивный речной камень, старинная ковка и уникальные ковры, созданные поколениями дагестанских мастериц.</p>
                 </div>
 
                 <div class="value-card">
-                    <span class="value-number">II</span>
+                    <span class="value-number">// 02</span>
                     <h3>Высокое ремесло</h3>
-                    <p>Коллаборация с потомственными мастерами. Каждый ковер, кованая деталь или элемент резьбы несет в себе историю и создается индивидуально под проект.</p>
+                    <p>Коллаборация с потомственными чеканщиками, резчиками и кузнецами. Каждый элемент декора несет в себе историю и создается исключительно под ваш объем.</p>
                 </div>
 
                 <div class="value-card">
-                    <span class="value-number">III</span>
-                    <h3>Бескомпромиссный комфорт</h3>
-                    <p>Горский дух незаметно интегрируется в безупречную эргономику, современные сценарии освещения и европейские инженерные стандарты.</p>
+                    <span class="value-number">// 03</span>
+                    <h3>Скрытый комфорт</h3>
+                    <p>Первозданная этническая эстетика безупречно интегрируется со сложнейшей инженерией, автоматизацией «Умный дом» и премиальным европейским светом.</p>
                 </div>
 
             </div>
@@ -121,45 +320,98 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <h2>Создайте интерьер со смыслом</h2>
+                    <h2>Создайте интерьер<br>с глубоким смыслом</h2>
                     <div class="footer-contacts">
-                        <p>Обсудить ваш будущий дом лично:</p>
+                        <p>Личная встреча в Москве:</p>
                         <a href="tel:+79882910378">+7 (988) 291-03-78</a>
                     </div>
                 </div>
-<div>
-    <form id="premium-form" method="POST" style="max-width: 450px; margin: 0 auto;">
-        
-        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
-        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
-        <input type="checkbox" name="botcheck" style="display: none;">
+                
+                <div class="form-box">
+                    <form id="premium-form" method="POST">
+                        <input type="hidden" name="access_key" value="5334822f-d3ac-469e-932e-a70b99a24fa6">
+                        <input type="hidden" name="subject" value="Новая заявка с этно-лендинга Забожанова">
+                        <input type="checkbox" name="botcheck" style="display: none;">
 
-        <div style="margin-bottom: 30px; position: relative;">
-            <input type="text" name="Имя" placeholder="Ваше имя" required
-                   style="width: 100%; padding: 18px 0; background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; color: #e5e5e5 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; outline: none !important; box-shadow: none !important; border-radius: 0 !important;">
-        </div>
-
-        <div style="margin-bottom: 40px; position: relative;">
-            <input type="tel" name="Телефон" placeholder="Номер телефона" required
-                   style="width: 100%; padding: 18px 0; background: transparent !important; border: none !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; color: #e5e5e5 !important; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; outline: none !important; box-shadow: none !important; border-radius: 0 !important;">
-        </div>
-
-        <div style="margin-top: 40px;">
-            <button type="submit" id="submit-btn" 
-                    style="display: inline-block; width: 100%; padding: 20px 40px; background-color: #c5a880; color: #0f0f10; font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; border: 1px solid #c5a880; cursor: pointer; transition: all 0.3s ease; border-radius: 0 !important;">
-                Начать проектирование
-            </button>
-        </div>
-    </form>
-    
-    <div id="form-result" class="form-result" style="display: none; font-size: 1.1rem; color: #c5a880; font-family: 'Cormorant Garamond', serif; border: 1px dashed #c5a880; padding: 20px; text-align: center; margin-top: 20px; letter-spacing: 1px;"></div>
-</div>
+                        <div class="form-group">
+                            <input type="text" name="Имя" class="form-input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="Телефон" class="form-input" placeholder="Номер телефона" required>
+                        </div>
+                        <div style="margin-top: 50px;">
+                            <button type="submit" id="submit-btn" class="form-btn">Начать проектирование</button>
+                        </div>
+                    </form>
+                    <div id="form-result" class="form-result"></div>
+                </div>
             </div>
+            
             <div class="copyright">
                 «Интерьер, который помнит откуда он родом, но смотрит вперёд»
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left');
+        const scrollReveal = function() {
+            for (let i = 0; i < revealElements.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = revealElements[i].getBoundingClientRect().top;
+                const elementVisible = 80;
+                if (elementTop < windowHeight - elementVisible) {
+                    revealElements[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', scrollReveal);
+        window.addEventListener('load', scrollReveal);
+
+        const form = document.getElementById('premium-form');
+        const result = document.getElementById('form-result');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.innerText = "Связываемся с сервером...";
+            submitBtn.style.opacity = "0.4";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Благодарим за доверие. Андрей Забожанов свяжется с вами лично.";
+                    result.style.display = "block";
+                    form.reset();
+                } else {
+                    result.innerHTML = "Ошибка отправки. Пожалуйста, свяжитесь по телефону напрямую.";
+                    result.style.display = "block";
+                }
+            })
+            .catch(error => {
+                result.innerHTML = "Ошибка сети. Проверьте подключение.";
+                result.style.display = "block";
+            })
+            .then(function() {
+                submitBtn.innerText = "Начать проектирование";
+                submitBtn.style.opacity = "1";
+                submitBtn.disabled = false;
+                setTimeout(() => { result.style.display = "none"; }, 6000);
+            });
+        });
+    </script>
 </body>
 </html>
