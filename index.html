@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Андрей Забожанов | Архитектура и премиальные interior-решения</title>
+    <title>Андрей Забожанов | Архитектура и премиальные интерьеры</title>
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://design.great05.ru/">
@@ -49,6 +49,9 @@
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
         html { scroll-behavior: smooth; background-color: var(--bg-deep); color: var(--text-white); font-family: var(--font-sans); overflow-x: hidden; }
         h1, h2, h3 { font-family: var(--font-serif); font-weight: 300; letter-spacing: 0.03em; }
+        
+        /* УБИРАЕМ КЛАССИЧЕСКОЕ ПОДЧЕРКИВАНИЕ ТЕКСТА У ССЫЛОК НА КОРНЕВОМ УРОВНЕ */
+        a { text-decoration: none !important; color: inherit; }
 
         .container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
 
@@ -56,7 +59,7 @@
         .reveal { opacity: 0; transform: translateY(40px); transition: var(--transition-premium); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* --- ШАПКА --- */
+        /* --- ШАПКА (КРАСИВАЯ ЛИНИЯ ПОД ПРЕДЕЛАМИ ТЕКСТА) --- */
         header { position: absolute; top: 0; left: 0; width: 100%; z-index: 100; padding: 45px 0; }
         .header-container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-family: var(--font-serif); font-size: 0.85rem; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 400; }
@@ -85,7 +88,7 @@
         .manifesto-text { font-family: var(--font-serif); font-size: 2.6rem; line-height: 1.5; max-width: 1000px; margin: 0 auto; font-weight: 300; font-style: italic; color: #f0f0f0; }
         .manifesto-text span { color: var(--accent-gold); font-style: normal; }
 
-        /* --- СЕКЦИЯ: О ДИЗАЙНЕРЕ --- */
+        /* --- СЕКЦИЯ: О ДИЗАЙНЕРЕ (ЛИНИЯ СТАТИСТИКИ НА МЕСТЕ) --- */
         .about { padding: 120px 0; background-color: var(--bg-card); }
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         .about-img-box { width: 100%; height: 580px; background: url('about.jpg') center/cover no-repeat; }
@@ -93,7 +96,6 @@
         .about-info h2 span { font-style: italic; font-family: var(--font-serif); color: var(--accent-gold); text-transform: none; }
         .about-info p { color: var(--text-gray); font-size: 1.05rem; font-weight: 200; line-height: 1.9; margin-bottom: 40px; }
         
-        /* Выравнивание подзаголовков статистики по единому стилю */
         .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px; }
         .stat-item h3 { font-size: 2.8rem; color: var(--accent-gold); margin-bottom: 5px; font-family: var(--font-serif); }
         .stat-item h3.lowercase-text { text-transform: lowercase; }
@@ -112,7 +114,7 @@
         .portfolio-overlay h3 { font-size: 1.8rem; margin-bottom: 10px; font-weight: 400; }
         .portfolio-overlay p { font-size: 0.75rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; }
 
-        /* --- СЕКЦИЯ: ЦЕННОСТИ --- */
+        /* --- СЕКЦИЯ: ЦЕННОСТИ (СТРОГИЙ МАРКЕР) --- */
         .values { padding: 140px 0; background-color: var(--bg-card); }
         .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
         .value-card { padding: 60px 45px; background: linear-gradient(145deg, #19191c, #111113); border: 1px solid rgba(255, 255, 255, 0.01); transition: var(--transition-premium); position: relative; }
@@ -121,7 +123,7 @@
         .value-card h3 { font-size: 1.6rem; margin-bottom: 20px; text-transform: uppercase; font-weight: 400; color: #f5f5f5; }
         .value-card p { color: var(--text-gray); font-size: 0.95rem; font-weight: 200; line-height: 1.8; }
 
-        /* --- СИММЕТРИЧНЫЙ ФУТЕР --- */
+        /* --- СИММЕТРИЧНЫЙ ФУТЕР (ВЕРХНЯЯ ГЕОМЕТРИЧЕСКАЯ ЛИНИЯ НА МЕСТЕ) --- */
         footer { padding: 160px 0 80px 0; background: linear-gradient(180deg, var(--bg-deep) 0%, #040405 100%); border-top: 1px solid rgba(214, 183, 149, 0.1); }
         .footer-center-container { max-width: 600px; margin: 0 auto; text-align: center; }
         .footer-center-container h2 { font-size: 4rem; text-transform: uppercase; margin-bottom: 60px; line-height: 1.1; font-weight: 300; }
@@ -149,6 +151,7 @@
             border: 1px dashed var(--accent-gold); padding: 20px; text-align: center; margin-top: 30px;
         }
 
+        /* КРАСИВАЯ ДЕКОРАТИВНАЯ ЛИНИЯ НАД СЛОГАНОМ */
         .footer-location-block { margin: 100px auto 50px auto; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 50px; max-width: 400px; }
         .footer-location-block p { font-size: 0.85rem; color: var(--text-gray); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; font-weight: 200; }
         .footer-location-block a { color: var(--text-white); font-size: 2.2rem; font-family: var(--font-serif); letter-spacing: 0.03em; font-weight: 300; }
@@ -186,7 +189,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Память предков.<br>Эстетика будущего.</h1>
-                <p>Премиальные жилые пространства с глубоким горским характером от архитектора Андрея Забожанова. 20 лет авторского опыта трансформации кавказских традиций в контекст современных резиденций Quiet Luxury для объектов в Москве.</p>
+                <p>Премиальные жилые пространства с глубоким горским характером от архитектора Андрея Забожанова. 20 лет авторского опыта трансформации кавказских традиций в контекст современных резиденций Quiet Luxury для объектов in Москве.</p>
                 <a href="#contact" class="btn">Обсудить ваш проект</a>
             </div>
         </div>
@@ -261,19 +264,19 @@
             <div class="values-grid">
                 
                 <div class="value-card">
-                    <span class="value-number">// 01</span>
+                    <span class="value-number">01</span>
                     <h3>Родные материалы</h3>
                     <p>Прямые поставки аутентичного сырья: реликтовый карагач, массивный речной камень, старинная ковка и уникальные ковры, созданные поколениями дагестанских мастериц.</p>
                 </div>
 
                 <div class="value-card">
-                    <span class="value-number">// 02</span>
+                    <span class="value-number">02</span>
                     <h3>Высокое ремесло</h3>
                     <p>Коллаборация с потомственными чеканщиками, резчиками и кузнецами. Каждый элемент декора несет в себе историю и создается исключительно под ваш объем.</p>
                 </div>
 
                 <div class="value-card">
-                    <span class="value-number">// 03</span>
+                    <span class="value-number">03</span>
                     <h3>Скрытый комфорт</h3>
                     <p>Первозданная этническая эстетика безупречно интегрируется со сложнейшей инженерией, автоматизацией «Умный дом» и премиальным европейским светом.</p>
                 </div>
